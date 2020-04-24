@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'arcade_roundedregular';
+    src: url('arcade_r-webfont.woff2') format('woff2'),
+    url('arcade_r-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: #0b0b0b;
+    font-family: 'arcade_roundedregular';
+    color: white;
+}
+.map {
+    width: 1000px;
+    height: 1000px;
+    position: relative;
+    margin: auto;
+    zoom: 70% ;
+}
+
+/*Pac-man et les fantômes*/
+img[src="./assets/img/pac-man.gif"] {
+    position: absolute;
+    top: 500px;
+    left: 500px;
+    width: 100px;
+}
+img[src="./assets/img/ms-pac-man.gif"] {
+    position: absolute;
+    top: 500px;
+    left: 500px;
+    width: 100px;
+}
+img[src="./assets/img/background.svg"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 1000px;
+}
+img[src="./assets/img/red-ghost.gif"] {
+    position: absolute;
+    top: 400px;
+    left: 400px;
+    width: 100px;
+}
+img[src="./assets/img/blue-ghost.gif"] {
+    position: absolute;
+    top: 400px;
+    left: 500px;
+    width: 100px;
+}
+img[src="./assets/img/pink-ghost.gif"] {
+    position: absolute;
+    top: 400px;
+    left: 400px;
+    width: 100px;
+}
+
+/*Pac-gums*/
+.dot {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.dot::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff6;
+}
+
+/*Changement de direction*/
+.toLeft {
+    transform: none;
+}
+.toTop {
+    transform: rotate(90deg);
+}
+.toRight {
+    transform: scale(-1, 1);
+}
+.toBottom {
+    transform: rotate(-90deg);
+}
+
+/*Choix du joueur*/
+.choosePlayer {
+    font-size: 40px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img[src="./assets/img/pac-man.png"] {
+    top:385px;
+    left: 410px;
+    width: 85px;
+    position: absolute;
+}
+img[src="./assets/img/ms-pac-man.png"] {
+    top: 525px;
+    left: 410px;
+    width: 80px;
+    position: absolute;
+}
+button {
+    background-color: #0b0b0b;
+    font: 40px 'arcade_roundedregular';
+    color: white;
+    padding: 6px;
+    width: 700px;
+    height: 100px;
+    border: 8px solid;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/*Confirmation du joueur*/
+.confirmBoy {
+    font-size: 40px;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img[src="./assets/img/pac-man2.gif"] {
+    width: 125px;
+}
+.confirmGirl {
+    font-size: 40px;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img[src="./assets/img/ms-pac-man2.gif"] {
+    width: 125px;
+}
+
+/*Saisie du nom*/
+.namePage {
+    z-index: 1;
+    font-size: 40px;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+input {
+    margin: 30px;
+    background-color: #0b0b0b;
+    font: 40px 'arcade_roundedregular';
+    color: white;
+    width: 680px;
+    height: 90px;
+    border: 8px solid;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/*Page de jeu*/
+.gamePage {
+    opacity: 0.7;
+    width: 700px;
+    position: relative;
+    margin: auto;
+    display: none;
+    flex-flow: column;
+    z-index: 0;
+}
+.top {
+    font-size: 30px;
+    width: 700px;
+    justify-content: space-between;
+}
+
+/*Page du game over et affichage des meilleures scores*/
+.gameOverPage {
+    z-index: 1;
+    font-size: 40px;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.resultPage {
+    font-size: 40px;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
